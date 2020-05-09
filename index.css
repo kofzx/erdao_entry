@@ -1,0 +1,145 @@
+.canvas {
+	height: 462px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+}
+.floor-stuff {
+	display: flex;
+	justify-content: flex-start;
+}
+.shop {
+	width: 290px;
+	height: 220px;
+	background: url('./assets/shop.svg') no-repeat;
+	margin-left: 24px;
+}
+.tree-box {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+.tree {
+	position: relative;
+	left: -10px;
+}
+.line {
+	transform: scale(1.2, 1);
+	position: relative;
+	right: -6px;
+    height: 2px;
+}
+.ding {
+	position: absolute;
+	left: 160px;
+	top: 176px;
+	animation: breathe 3s ease-in-out infinite;
+}
+@keyframes breathe {
+	0%, 100% {
+		transform: translate3d(0px,-2px,0px) scale3d(1, 1, 1);
+	}
+	50% {
+		transform: translate3d(0px,6px,0px) scale3d(0.85, 0.85, 0.85);
+	}
+}
+.cloud1 {
+	position: absolute;
+	left: 22px;
+	top: 124px;
+	animation: float 2s ease-in-out alternate-reverse infinite;
+}
+.cloud2 {
+	position: absolute;
+	left: 226px;
+	top: 144px;
+	animation: float 2s ease-in-out alternate infinite;
+}
+.cloud3 {
+	position: absolute;
+	left: 294px;
+	top: 164px;
+	animation: float 2s ease-in-out alternate-reverse infinite;
+}
+.bird1 {
+	position: absolute;
+	left: 280px;
+	top: 206px;
+	display: flex;
+	justify-content: flex-start;
+}
+.bird2 {
+	position: absolute;
+	left: 322px;
+	top: 232px;
+	display: flex;
+	justify-content: flex-start;
+}
+.bird-wings {
+	position: relative;
+	left: 3px;
+    transform-origin: bottom right;
+    animation-name: fly-left;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.bird-wings-flip {
+    transform-origin: bottom left;
+    animation-name: fly-right;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.bird1,
+.bird2 {
+	animation-name: float;
+	animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.bird1 {
+	animation-duration: 1.4s;
+}
+.bird2 {
+	animation-duration: 1.2s;
+}
+.bird1 .bird-wings {
+	animation-duration: 1.4s;
+}
+.bird1 .bird-wings-flip {
+	animation-duration: 1.4s;
+}
+.bird2 .bird-wings {
+	animation-duration: 1.2s;
+}
+.bird2 .bird-wings-flip {
+	animation-duration: 1.2s;
+}
+@keyframes float {
+	0% {
+		transform: translate3d(0px,-2px,0px);
+	}
+	100% {
+		transform: translate3d(0px,2px,0px);
+	}
+}
+@keyframes fly-left {
+	0% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+@keyframes fly-right {
+	0% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(10deg);
+	}
+}
