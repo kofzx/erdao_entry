@@ -14,6 +14,37 @@
 	height: 220px;
 	background: url('./assets/shop.svg') no-repeat;
 	margin-left: 24px;
+	position: relative;
+}
+.shop-logo {
+	width: 44%;
+	height: 100%;
+	position: absolute;
+	left: 60px;
+	top: 0px;
+	border-radius: 6px 6px 0 0;
+	z-index: 2;
+}
+.shop-eaves {
+	overflow: hidden;
+	width: 72%;
+	height: 18px;
+	position: absolute;
+	left: 50px;
+	top: 30px;
+}
+.shop-eaves::before {
+	width: 100%;
+	height: 100%;
+	content: '';
+	z-index: 1;
+	position: absolute;
+	left: -38px;
+	top: 0;
+	background-image: url('./assets/light.svg');
+	background-repeat: no-repeat;
+	background-size: 140%;
+	background-position: 0px;
 }
 .tree-box {
 	flex: 1;
