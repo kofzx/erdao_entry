@@ -11,17 +11,15 @@
 }
 .shop {
 	width: 290px;
-	height: 220px;
+	height: 192px;
 	background: url('./assets/shop.svg') no-repeat;
 	margin-left: 24px;
 	position: relative;
 }
 .shop-logo {
-	width: 44%;
-	height: 100%;
 	position: absolute;
-	left: 60px;
-	top: 0px;
+	left: 107px;
+	top: -27px;
 	border-radius: 6px 6px 0 0;
 	z-index: 2;
 }
@@ -31,7 +29,7 @@
 	height: 18px;
 	position: absolute;
 	left: 50px;
-	top: 30px;
+	top: 2px;
 }
 .shop-eaves::before {
 	width: 100%;
@@ -39,12 +37,60 @@
 	content: '';
 	z-index: 1;
 	position: absolute;
-	left: -38px;
+	left: -80%;
 	top: 0;
 	background-image: url('./assets/light.svg');
 	background-repeat: no-repeat;
 	background-size: 140%;
 	background-position: 0px;
+	animation: light 3s ease-in-out infinite;
+}
+.shop-glass {
+	position: absolute;
+	overflow: hidden;
+}
+.shop-glass--left {
+	width: 68.925px;
+    height: 63.272px;
+	left: 41px;
+    top: 103px;
+}
+.glass-main {
+	background: #ffffff;
+	opacity: 0.6;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.glass-light {
+	transform: scale(5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.glass-light::before {
+	width: 100%;
+	height: 100%;
+	content: '';
+	z-index: 1;
+	position: absolute;
+	left: -80%;
+	top: 0;
+	background-image: url('./assets/light.svg');
+	background-repeat: no-repeat;
+	background-size: 140%;
+	background-position: 0px;
+	animation: light 3s ease-in-out infinite;
+}
+.shop-glass--right {
+	width: 67.414px;
+    height: 63.263px;
+	left: 200px;
+    top: 103px;
 }
 .tree-box {
 	flex: 1;
@@ -156,6 +202,14 @@
 	}
 	100% {
 		transform: translate3d(0px,2px,0px);
+	}
+}
+@keyframes light {
+	0% {
+		transform: translate3d(0px,0px,0px);
+	}
+	100% {
+		transform: translate3d(120%,0px,0px);
 	}
 }
 @keyframes fly-left {
