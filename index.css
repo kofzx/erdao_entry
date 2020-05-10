@@ -7,13 +7,13 @@
 }
 .floor-stuff {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 }
 .shop {
 	width: 290px;
 	height: 192px;
 	background: url('./assets/shop.svg') no-repeat;
-	margin-left: 24px;
+	/* margin-left: 24px; */
 	position: relative;
 }
 .shop-logo {
@@ -37,13 +37,27 @@
 	content: '';
 	z-index: 1;
 	position: absolute;
-	left: -80%;
+	left: -91%;
 	top: 0;
 	background-image: url('./assets/light.svg');
 	background-repeat: no-repeat;
 	background-size: 140%;
 	background-position: 0px;
-	animation: light 3s ease-in-out infinite;
+	animation: light-eaves 4s ease-in-out infinite;
+}
+.shop-eaves::after {
+	width: 100%;
+	height: 100%;
+	content: '';
+	z-index: 1;
+	position: absolute;
+	left: -46%;
+	top: 0;
+	background-image: url('./assets/light.svg');
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: 0px;
+	animation: light-eaves 4s ease-in-out infinite;
 }
 .shop-glass {
 	position: absolute;
@@ -53,6 +67,12 @@
 	width: 68.925px;
     height: 63.272px;
 	left: 41px;
+    top: 103px;
+}
+.shop-glass--right {
+	width: 67.414px;
+    height: 63.263px;
+	left: 200px;
     top: 103px;
 }
 .glass-main {
@@ -78,22 +98,20 @@
 	content: '';
 	z-index: 1;
 	position: absolute;
-	left: -80%;
+	left: -45%;
 	top: 0;
 	background-image: url('./assets/light.svg');
 	background-repeat: no-repeat;
 	background-size: 140%;
 	background-position: 0px;
-	animation: light 3s ease-in-out infinite;
 }
-.shop-glass--right {
-	width: 67.414px;
-    height: 63.263px;
-	left: 200px;
-    top: 103px;
+.shop-glass--left .glass-light::before {
+	animation: light-left 4s ease-in-out infinite;
+}
+.shop-glass--right .glass-light::before {
+	animation: light-right 4s ease-in-out infinite;
 }
 .tree-box {
-	flex: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -111,7 +129,7 @@
 }
 .ding {
 	position: absolute;
-	left: 160px;
+	left: 41%;
 	top: 176px;
 	animation: breathe 3s ease-in-out infinite;
 }
@@ -125,32 +143,32 @@
 }
 .cloud1 {
 	position: absolute;
-	left: 22px;
+	left: 5.86666666667%;
 	top: 124px;
 	animation: float 2s ease-in-out alternate-reverse infinite;
 }
 .cloud2 {
 	position: absolute;
-	left: 226px;
+	left: 60.26666666667%;
 	top: 144px;
 	animation: float 2s ease-in-out alternate infinite;
 }
 .cloud3 {
 	position: absolute;
-	left: 294px;
+	left: 78.4%;
 	top: 164px;
 	animation: float 2s ease-in-out alternate-reverse infinite;
 }
 .bird1 {
 	position: absolute;
-	left: 280px;
+	left: 74.6666666667%;
 	top: 206px;
 	display: flex;
 	justify-content: flex-start;
 }
 .bird2 {
 	position: absolute;
-	left: 322px;
+	left: 85.86666666667%;
 	top: 232px;
 	display: flex;
 	justify-content: flex-start;
@@ -206,6 +224,30 @@
 }
 @keyframes light {
 	0% {
+		transform: translate3d(0px,0px,0px);
+	}
+	100% {
+		transform: translate3d(120%,0px,0px);
+	}
+}
+@keyframes light-eaves {
+	0%, 10% {
+		transform: translate3d(0px,0px,0px);
+	}
+	66%, 100% {
+		transform: translate3d(130%,0px,0px);
+	}
+}
+@keyframes light-left {
+	0% {
+		transform: translate3d(0px,0px,0px);
+	}
+	77%, 100% {
+		transform: translate3d(120%,0px,0px);
+	}
+}
+@keyframes light-right {
+	0%, 23% {
 		transform: translate3d(0px,0px,0px);
 	}
 	100% {
