@@ -8,6 +8,7 @@
 .floor-stuff {
 	display: flex;
 	justify-content: center;
+	position: relative;
 }
 .shop {
 	width: 290px;
@@ -63,10 +64,10 @@
 	overflow: hidden;
 }
 .shop-glass--left {
-	width: 68.925px;
-    height: 63.272px;
-	left: 41px;
-    top: 103px;
+	width: 23.76724137931034%;
+    height: 32.9541666666667%;
+	left: 14.13793103448276%;
+    top: 53.64583333333%;
 }
 .shop-glass--right {
 	width: 67.414px;
@@ -185,6 +186,7 @@
 .tree {
 	position: relative;
 	left: -10px;
+	top: 1px;
 }
 .line {
 	transform: scale(1.2, 1);
@@ -195,7 +197,7 @@
 .ding {
 	position: absolute;
 	left: 41%;
-	top: 176px;
+	top: -49.9047619048%;
 	animation: breathe 3s ease-in-out infinite;
 }
 @keyframes breathe {
@@ -209,32 +211,32 @@
 .cloud1 {
 	position: absolute;
 	left: 5.86666666667%;
-	top: 124px;
+	top: -74.160173%;
 	animation: float 2s ease-in-out alternate-reverse infinite;
 }
 .cloud2 {
 	position: absolute;
 	left: 60.26666666667%;
-	top: 144px;
+	top: -62.831169%;
 	animation: float 2s ease-in-out alternate infinite;
 }
 .cloud3 {
 	position: absolute;
 	left: 78.4%;
-	top: 164px;
+	top: -52.502165%;
 	animation: float 2s ease-in-out alternate-reverse infinite;
 }
 .bird1 {
 	position: absolute;
 	left: 74.6666666667%;
-	top: 206px;
+	top: -29.411255%;
 	display: flex;
 	justify-content: flex-start;
 }
 .bird2 {
 	position: absolute;
 	left: 85.86666666667%;
-	top: 232px;
+	top: -18.78355%;
 	display: flex;
 	justify-content: flex-start;
 }
