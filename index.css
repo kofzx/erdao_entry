@@ -13,7 +13,6 @@
 	width: 290px;
 	height: 192px;
 	background: url('./assets/shop.svg') no-repeat;
-	/* margin-left: 24px; */
 	position: relative;
 }
 .shop-logo {
@@ -83,6 +82,72 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+.bag {
+	position: absolute;
+	transform-origin: bottom center;
+	animation-duration: 2.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.bag1 {
+	left: 8px;
+	top: 24px;
+	z-index: 2;
+	animation-name: flatten;
+}
+.bag2 {
+	left: 32px;
+	top: 35px;
+	z-index: 1;
+	animation-name: flatten-reverse;
+}
+.bag3 {
+	left: 10px;
+	top: 35px;
+	z-index: 1;
+	animation-name: flatten-reverse;
+}
+.bag4 {
+	left: 27px;
+	top: 18px;
+	z-index: 2;
+	animation-name: flatten;
+}
+.star {
+	position: absolute;
+	z-index: 3;
+	transform: scale(0) rotate(-25deg);
+}
+.star1 {
+	left: 8px;
+	top: 25px;
+	animation: star1 4s ease-in-out infinite;
+}
+.star2 {
+	left: 36px;
+	top: 10px;
+	animation: star2 4s ease-in-out infinite;
+}
+.star3 {
+	left: 24px;
+	top: -2px;
+	animation: star3 4s ease-in-out infinite;
+}
+.star4 {
+	left: 34px;
+	top: 20px;
+	animation: star4 4s ease-in-out infinite;
+}
+.star5 {
+	left: 44px;
+	top: 4px;
+	animation: star5 4s ease-in-out infinite;
+}
+.star6 {
+	left: 34px;
+	top: -6px;
+	animation: star2 4s ease-in-out infinite;
 }
 .glass-light {
 	transform: scale(5);
@@ -268,5 +333,146 @@
 	}
 	100% {
 		transform: rotate(10deg);
+	}
+}
+@keyframes flatten {
+	0%, 100% {
+		transform: scale(1, 1);
+	}
+	33.333333% {
+		transform: scale(1, 1.02);
+	}
+	66.666666% {
+		transform: scale(1.04, 0.97);
+	}
+}
+@keyframes flatten-reverse {
+	0%, 100% {
+		transform: scale(1, 1);
+	}
+	33.333333% {
+		transform: scale(1.04, 0.97);
+	}
+	66.666666% {
+		transform: scale(1, 1.02);
+	}
+}
+@keyframes star {
+	0% {
+		transform: scale(0) rotate(-25deg);
+	}
+	25% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	40% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	50% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	100% {
+		transform: scale(0) rotate(0deg);
+	}
+}
+@keyframes star1 {
+	0%, 7.5% {
+		transform: scale(0) rotate(-25deg);
+	}
+	15% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	19.5% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	22.5% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	30%, 100% {
+		transform: scale(0) rotate(0deg);
+	}
+}
+@keyframes star2 {
+	0%, 22.5% {
+		transform: scale(0) rotate(-25deg);
+	}
+	30% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	34.5% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	37.5% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	52.5%, 100% {
+		transform: scale(0) rotate(0deg);
+	}
+}
+@keyframes star3 {
+	0%, 30% {
+		transform: scale(0) rotate(-25deg);
+	}
+	37.5% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	42% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	45% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	60%, 100% {
+		transform: scale(0) rotate(0deg);
+	}
+}
+@keyframes star4 {
+	0%, 12.5% {
+		transform: scale(0) rotate(-25deg);
+	}
+	20% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	24.5% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	27.5% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	42.5%, 100% {
+		transform: scale(0) rotate(0deg);
+	}
+}
+@keyframes star5 {
+	0%, 15% {
+		transform: scale(0) rotate(-25deg);
+	}
+	22.5% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	27% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	30% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	45%, 100% {
+		transform: scale(0) rotate(0deg);
+	}
+}
+@keyframes star6 {
+	0%, 15% {
+		transform: scale(0) rotate(-25deg);
+	}
+	22.5% {
+		transform: scale(0.7) rotate(-25deg);
+	}
+	27% {
+		transform: scale(0.9) rotate(-10deg);
+	}
+	30% {
+		transform: scale(0.7) rotate(0deg);
+	}
+	45%, 100% {
+		transform: scale(0) rotate(0deg);
 	}
 }
