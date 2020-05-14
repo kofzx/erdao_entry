@@ -17,9 +17,10 @@
 	position: relative;
 }
 .shop-logo {
+	height: 49.41px;
 	position: absolute;
 	left: 107px;
-	top: -27px;
+	top: -28px;
 	border-radius: 6px 6px 0 0;
 	z-index: 2;
 }
